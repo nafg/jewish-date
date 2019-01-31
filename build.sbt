@@ -7,7 +7,7 @@ lazy val jewishDate =
     .in(file("."))
     .settings(
       name := "jewish-date",
-      version := "0.1.0",
+      version := "0.1.1",
       libraryDependencies += "io.monix" %%% "minitest" % "2.0.0" % "test",
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )
@@ -19,7 +19,7 @@ lazy val jewishDate =
       Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-minSuccessfulTests", "10000")
     )
     .jsSettings(
-      libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-M12"
+      libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-RC1"
     )
 lazy val jewishDateJS = jewishDate.js
 lazy val jewishDateJVM = jewishDate.jvm

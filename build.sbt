@@ -1,5 +1,8 @@
 ThisBuild / organization := "io.github.nafg"
-ThisBuild / scalaVersion := "2.12.4"
+
+ThisBuild / crossScalaVersions := Seq("2.12.8", "2.13.0")
+ThisBuild / scalaVersion := (ThisBuild / crossScalaVersions).value.last
+
 ThisBuild / scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
 lazy val jewishDate =

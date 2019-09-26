@@ -15,7 +15,7 @@ lazy val jewishDate =
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )
     .jvmSettings(
-      libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.1" % "test",
+      libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.2" % "test",
       libraryDependencies +=
         ("KosherJava" % "zmanim" % "1.4.0alpha" % "test")
           .from("https://github.com/KosherJava/zmanim/raw/master/lib/zmanim-1.4.0alpha.jar"),

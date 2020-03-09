@@ -24,7 +24,7 @@ lazy val jewishDate =
       Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-minSuccessfulTests", "10000")
     )
     .jsSettings(
-      libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-RC3"
+      libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-RC4"
     )
 lazy val jewishDateJS = jewishDate.js
 lazy val jewishDateJVM = jewishDate.jvm

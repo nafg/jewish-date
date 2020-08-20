@@ -11,7 +11,7 @@ import org.scalacheck.{Gen, Prop, Properties}
 class JewishDateCompanionProps extends Properties("JewishDate") {
   val genLocalDate: Gen[LocalDate] =
     for {
-      year <- Gen.choose(1, 3000)
+      year <- Gen.choose(1583, 3000)
       month <- Gen.choose(1, 12)
       day <- Gen.choose(1, Month.of(month).length(Year.isLeap(year)))
     } yield LocalDate.of(year, month, day)

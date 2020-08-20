@@ -13,14 +13,12 @@ lazy val jewishDate =
     .settings(
       name := "jewish-date",
       version := "0.2.0",
-      libraryDependencies += "io.monix" %%% "minitest" % "2.8.2" % "test",
+      libraryDependencies += "io.monix" %%% "minitest" % "2.8.2" % Test,
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )
     .jvmSettings(
-      libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.3" % "test",
-      libraryDependencies +=
-        ("KosherJava" % "zmanim" % "1.4.0alpha" % "test")
-          .from("https://github.com/KosherJava/zmanim/raw/master/lib/zmanim-1.4.0alpha.jar"),
+      libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.3" % Test,
+      libraryDependencies += ("com.kosherjava" % "zmanim" % "2.0" % Test),
       Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-minSuccessfulTests", "10000")
     )
     .jsSettings(

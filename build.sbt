@@ -12,7 +12,7 @@ lazy val jewishDate =
     .in(file("."))
     .settings(
       name := "jewish-date",
-      version := "0.2.0",
+      version := "0.3.0",
       libraryDependencies += "io.monix" %%% "minitest" % "2.8.2" % Test,
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )

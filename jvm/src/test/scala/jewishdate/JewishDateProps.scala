@@ -2,7 +2,7 @@ package jewishdate
 
 import java.time._
 
-import net.sourceforge.zmanim.hebrewcalendar.{JewishCalendar => KJCal}
+import com.kosherjava.zmanim.hebrewcalendar.{JewishCalendar => KJCal}
 import org.scalacheck.Prop._
 import org.scalacheck.{Gen, Prop, Properties}
 

@@ -41,7 +41,7 @@ object JewishDate {
     val jewishYear =
       Iterator.iterate(jewishYearGuess)(_.next)
         .dropWhile(_.next.firstDay < jewishDay)
-        .next
+        .next()
 
     val monthSearchStart =
       if (jewishDay < new JewishDate(jewishYear, JewishMonth.Nissan, 1).day)
@@ -51,7 +51,7 @@ object JewishDate {
     val jewishMonth =
       jewishYear.monthsIterator(monthSearchStart)
         .dropWhile(m => jewishDay > new JewishDate(jewishYear, m, jewishYear.monthLength(m)).day)
-        .next
+        .next()
     val firstDayOfMonth = new JewishDate(jewishYear, jewishMonth, 1)
     val actualDayOfMonth = jewishDay - firstDayOfMonth.day + 1
     firstDayOfMonth.copy(dayOfMonth = actualDayOfMonth.toInt)

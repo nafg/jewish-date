@@ -7,6 +7,8 @@ ThisBuild / scalaVersion := (ThisBuild / crossScalaVersions).value.last
 
 ThisBuild / scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
+publish / skip := true
+
 lazy val jewishDate =
   crossProject(JVMPlatform, JSPlatform).crossType(CrossType.Full)
     .in(file("."))

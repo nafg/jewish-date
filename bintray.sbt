@@ -1,6 +1,5 @@
-publishMavenStyle in ThisBuild := true
-
-publishTo in ThisBuild := Some("Project Bintray" at "https://api.bintray.com/maven/naftoligug/maven/jewish-date")
+ThisBuild / publishTo :=
+  Some("Project Bintray" at "https://api.bintray.com/maven/naftoligug/maven/jewish-date;publish=1")
 
 sys.env.get("BINTRAYKEY").toSeq.map { key =>
   credentials in ThisBuild += Credentials(

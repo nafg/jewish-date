@@ -20,7 +20,7 @@ lazy val jewishDate =
     )
     .jvmSettings(
       libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.3" % Test,
-      libraryDependencies += ("com.kosherjava" % "zmanim" % "2.0" % Test),
+      libraryDependencies += ("com.kosherjava" % "zmanim" % "2.01" % Test),
       Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-minSuccessfulTests", "10000")
     )
     .jsSettings(

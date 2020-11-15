@@ -15,7 +15,7 @@ lazy val jewishDate =
     .settings(
       name := "jewish-date",
       version := "0.3.0",
-      libraryDependencies += "io.monix" %%% "minitest" % "2.8.2" % Test,
+      libraryDependencies += "io.monix" %%% "minitest" % "2.9.0" % Test,
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )
     .jvmSettings(

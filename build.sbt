@@ -1,8 +1,8 @@
 import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
-ThisBuild / organization := "io.github.nafg"
+ThisBuild / organization := "io.github.nafg.jewish-date"
 
-ThisBuild / crossScalaVersions := Seq("2.13.5", "2.13.1")
+ThisBuild / crossScalaVersions := Seq("2.12.13", "2.13.1")
 ThisBuild / scalaVersion := (ThisBuild / crossScalaVersions).value.last
 
 ThisBuild / scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
@@ -14,7 +14,6 @@ lazy val jewishDate =
     .in(file("."))
     .settings(
       name := "jewish-date",
-      version := "0.3.0",
       libraryDependencies += "io.monix" %%% "minitest" % "2.9.3" % Test,
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )

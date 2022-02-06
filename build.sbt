@@ -1,11 +1,17 @@
-import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
+import _root_.io.github.nafg.scalacoptions.{ScalacOptions, options}
+
+import sbtcrossproject.CrossPlugin.autoImport.{CrossType, crossProject}
+
 
 ThisBuild / organization := "io.github.nafg.jewish-date"
 
 ThisBuild / crossScalaVersions := Seq("2.12.15", "2.13.8")
 ThisBuild / scalaVersion := (ThisBuild / crossScalaVersions).value.last
 
-ThisBuild / scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
+ThisBuild / scalacOptions ++=
+  ScalacOptions.all(scalaVersion.value)(
+    (o: options.Common) => o.deprecation ++ o.unchecked ++ o.feature
+  )
 
 publish / skip := true
 

@@ -24,7 +24,7 @@ lazy val jewishDate =
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )
     .jvmSettings(
-      libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.16.0" % Test,
+      libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.17.0" % Test,
       libraryDependencies += ("com.kosherjava" % "zmanim" % "2.3.0" % Test),
       Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-minSuccessfulTests", "10000")
     )

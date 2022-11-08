@@ -5,7 +5,7 @@ import sbtcrossproject.CrossPlugin.autoImport.{CrossType, crossProject}
 
 ThisBuild / organization := "io.github.nafg.jewish-date"
 
-ThisBuild / scalaVersion := "3.2.0"
+ThisBuild / scalaVersion := "3.2.1"
 ThisBuild / crossScalaVersions := List("2.13.10", (ThisBuild / scalaVersion).value)
 
 ThisBuild / scalacOptions ++=

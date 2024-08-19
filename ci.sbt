@@ -1,4 +1,13 @@
+import _root_.io.github.nafg.mergify.dsl.*
+
+
 val repoPath = "nafg/jewish-date"
+
+mergifyExtraConditions := Seq(
+  (Attr.Author :== "scala-steward") ||
+    (Attr.Author :== "nafg-scala-steward[bot]")
+)
+
 inThisBuild(List(
   homepage := Some(url(s"https://github.com/$repoPath")),
   licenses := List("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0")),

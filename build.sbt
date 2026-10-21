@@ -15,14 +15,14 @@ ThisBuild / scalacOptions ++=
     (o: options.Common) => o.deprecation ++ o.unchecked ++ o.feature
   )
 
-publish / skip := true
+LocalRootProject / publish / skip := true
 
 lazy val jewishDate =
   crossProject(JVMPlatform, JSPlatform).crossType(CrossType.Full)
     .in(file("."))
     .settings(
       name := "jewish-date",
-      libraryDependencies += "io.monix" %%% "minitest" % "2.9.6" % Test,
+      libraryDependencies += "io.monix" %% "minitest" % "2.9.6" % Test,
       testFrameworks += new TestFramework("minitest.runner.Framework")
     )
     .jvmSettings(
@@ -31,7 +31,7 @@ lazy val jewishDate =
       Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-minSuccessfulTests", "10000")
     )
     .jsSettings(
-      libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.7.0"
+      libraryDependencies += "io.github.cquiroz" %% "scala-java-time" % "2.7.0"
     )
 lazy val jewishDateJS = jewishDate.js
 lazy val jewishDateJVM = jewishDate.jvm
